@@ -135,77 +135,136 @@
     </div>
 </section>
 <style>
+    /* General Styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #141414;
+        color: #d1d0cf;
+    }
+
     .faq-section {
-    padding: 60px 100px;
-    background: #141414;
-    color: #d1d0cf;
-}
+        padding: 30px 20px; /* Reduced padding for mobile */
+    }
 
-.faq-title {
-    font-size: 2.5em;
-    color: #e50914;
-    margin-bottom: 40px;
-    text-align: center;
-    text-transform: uppercase;
-}
+    .faq-title {
+        font-size: 1.8em; /* Reduced font size for mobile */
+        color: #e50914;
+        margin-bottom: 20px; /* Reduced margin for mobile */
+        text-align: center;
+        text-transform: uppercase;
+    }
 
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
+    .faq-container {
+        max-width: 100%; /* Full width for mobile */
+        margin: 0 auto;
+    }
 
-.faq-item {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
+    .faq-item {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        margin-bottom: 15px; /* Reduced margin for mobile */
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
 
-.faq-item:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
+    .faq-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
 
-.faq-question {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    cursor: pointer;
-}
+    .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center the content */
+        padding: 15px; /* Reduced padding for mobile */
+        cursor: pointer;
+        position: relative; /* For positioning icons */
+    }
 
-.faq-question h3 {
-    margin: 0;
-    font-size: 1.2em;
-    color: #fff;
-}
+    .faq-question h3 {
+        margin: 0;
+        font-size: 1em; /* Reduced font size for mobile */
+        color: #fff;
+        text-align: center; /* Center the text */
+    }
 
-.faq-question i {
-    font-size: 20px;
-    color: #e50914;
-}
+    .faq-question i {
+        font-size: 18px; /* Reduced icon size for mobile */
+        color: #e50914;
+        position: absolute; /* Position icons absolutely */
+    }
 
-.faq-answer {
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-}
+    .faq-question i.fa-question-circle {
+        left: 15px; /* Position the question icon to the left */
+    }
 
-.faq-answer p {
-    margin: 0;
-    padding: 20px 0;
-    color: #d1d0cf;
-}
+    .faq-question i.fa-chevron-down {
+        right: 15px; /* Position the chevron icon to the right */
+    }
 
-.faq-item.active .faq-answer {
-    max-height: 200px;
-    padding: 0 20px 20px;
-}
+    .faq-answer {
+        padding: 0 15px; /* Reduced padding for mobile */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        text-align: center; /* Center the answer text */
+    }
 
-.faq-item.active .faq-question i.fa-chevron-down {
-    transform: rotate(180deg);
-}
+    .faq-answer p {
+        margin: 0;
+        padding: 15px 0; /* Reduced padding for mobile */
+        color: #d1d0cf;
+        text-align: center; /* Center the text inside the answer */
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 500px; /* Increased max-height for longer answers */
+        padding: 0 15px 15px; /* Adjusted padding for mobile */
+    }
+
+    .faq-item.active .faq-question i.fa-chevron-down {
+        transform: rotate(180deg);
+    }
+
+    .back-button {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: #e50914;
+        text-decoration: none;
+        font-size: 1em; /* Reduced font size for mobile */
+    }
+
+    .back-button:hover {
+        text-decoration: underline;
+    }
+
+    .text-primary {
+        color: #e50914;
+    }
+
+    /* Media Queries for Smaller Screens */
+    @media (max-width: 480px) {
+        .faq-section {
+            padding: 20px 10px; /* Further reduced padding for very small screens */
+        }
+
+        .faq-title {
+            font-size: 1.5em; /* Further reduced font size for very small screens */
+        }
+
+        .faq-question h3 {
+            font-size: 0.9em; /* Further reduced font size for very small screens */
+        }
+
+        .faq-question i {
+            font-size: 16px; /* Further reduced icon size for very small screens */
+        }
+
+        .faq-answer p {
+            font-size: 0.9em; /* Further reduced font size for very small screens */
+        }
+    }
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
